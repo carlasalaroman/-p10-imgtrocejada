@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <title>transformaciones</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+        }
+        img{
+            width: 300%;
+        }
+        div{
+            width: 360px;
+            height: 540px;
+        }
+        div div{
+            overflow: hidden;
+        }
+        .uno img{
+            opacity: 1;
+            transition: 2s opacity;
+        }
+        .uno:hover img{
+            opacity: 0.2;
+        }
+        .dos img{
+            transform: translate(-360px, 0) scale(1);
+            transition: 1s transform;
+        }
+        .dos:hover img{
+            transform: scale(3);
+        }
+        .tres img{
+            transform: translate(-720px, 0) rotate(0);
+            transition: 2s 1s transform;
+        }
+        .tres:hover img{
+            transform: rotate(180deg);
+        }
+        .cuatro img{
+            transform: translate(0, -540px) skewX(0);
+            transition: 2s transform;
+        }
+        .cuatro:hover img{
+            transform: skewX(30deg);
+        }
+        .cinco img{
+            transform: translate(-360px, -540px) skewY(0);
+            transition: 2s transform;
+        }
+        .cinco:hover img{
+            transform: skewY(50deg);
+        }
+        .seis img{
+            transform: translate(-720px, -540px) scale(1);
+            transition: 2s transform;
+        }
+        .seis:hover img{
+            transform:scale(2);
+        }
+     i{
+           position: absolute;
+           right: 50px;
+           top: 50px;
+           padding: 30px;
+           color: hotpink;
+           transform: translateY(0);
+           transition: 3s transform;
+        }
+        i:hover{
+           transform: translateY(30px);
+           color:darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="uno">
+            <img src="img/8AA1A2A9-ECDE-45E2-B890-2E617ABADC22.jpeg">
+        </div>
+        <div class="dos">
+            <img src="img/8AA1A2A9-ECDE-45E2-B890-2E617ABADC22.jpeg">
+        </div>
+        <div class="tres">
+            <img src="img/8AA1A2A9-ECDE-45E2-B890-2E617ABADC22.jpeg">
+        </div>
+        <div class="cuatro">
+            <img src="img/8AA1A2A9-ECDE-45E2-B890-2E617ABADC22.jpeg">
+        </div>
+        <div class="cinco">
+            <img src="img/8AA1A2A9-ECDE-45E2-B890-2E617ABADC22.jpeg">
+        </div>
+        <div class="seis">
+            <img src="img/8AA1A2A9-ECDE-45E2-B890-2E617ABADC22.jpeg">
+        </div>
+    </div>
+</body>
+</html>
